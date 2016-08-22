@@ -1,4 +1,21 @@
-a {
-	text-decoration: underline;
+/*
+********************************************************************
+****** 160822 Yo! Budget Project; **********************************
+****** Coded by Joshua B. Turingan; ********************************
+****** using Materialize-css framework; ****************************
+********************************************************************
+*/
+
+html {
+	box-sizing: border-box;
 }
 
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+body {
+	background-color: #e4b0ff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

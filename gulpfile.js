@@ -4,14 +4,21 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	elixir = require('laravel-elixir'),
 	css = 'public/css',
-	js = 'public/js';
+	js = 'public/js',
+	fonts = 'public/fonts';
 
 
 
 
 gulp.task('components', function() {
+	/* jquery */
 	gulp.src('node_modules/jquery/dist/jquery.min.js')
 		.pipe(gulp.dest(js));
+
+	/* font-awesome */
+	gulp.src('node_modules/font-awesome/fonts/*')
+		.pipe(gulp.dest(fonts));
+
 });
 
 gulp.task('styles', function() {
@@ -21,14 +28,16 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('public/css'));
 });
 
-gulp.task('scripts', ['styles'], function() {
-	gulp.src(['resources/assets/js/script.js'])
-		.pipe(gulp.dest('public/js'));
+gulp.task('scripts', function() {
+	gulp.src(['resources/assets/js/scripts.js'])
+		.pipe(gulp.dest(js));
 });
 
 elixir(function(mix) {
 	
 	mix.task('components');
+	mix.task('styles');
+	mix.task('scripts');
 	mix.task('styles', 'resources/assets/sass/*.scss');
 	mix.task('scripts', 'resources/assets/js/*.js');
 	mix.browserSync({
