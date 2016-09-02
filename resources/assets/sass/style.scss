@@ -1,8 +1,9 @@
 /*
 ********************************************************************
-****** 160822 Yo! Budget Project; **********************************
+****** 160822 ******************************************************
+****** Yo! Budget Project; *****************************************
 ****** Coded by Joshua B. Turingan; ********************************
-****** using Materialize-css framework; ****************************
+****** using Bootstrap framework; **********************************
 ********************************************************************
 */
 
@@ -16,6 +17,111 @@ html {
 
 
 body {
-	background-color: #e4b0ff;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #fcf5ff;
+}
+
+header {
+	background-color: $bg-primary-color;
+
+	.container-fluid {
+		margin-bottom: 10px;
+	}
+
+	.head-content {
+		display: table;
+
+
+		a.menu-bars {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: left;
+			color: $p-color;
+		}
+
+		.head-main-content {
+			display: table-cell;
+
+			.sub-container {
+				display: table;
+				color: $p-color;
+
+				.title-money-container {
+					display: table-cell;
+					vertical-align: middle;
+					width: 100%;
+					font-family: 'Open Sans', sans-serif;
+
+					h1 {
+						font-size: 32px;
+						margin-bottom: 5px;
+					}
+
+					.current-money {
+						font-size: 20px;
+					}
+				}
+
+				p.date-today {
+					display: table-cell;
+					vertical-align: middle;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	nav {
+		ul {
+			display: flex;
+			padding: 0;
+			justify-content: space-around;
+			list-style-type: none;
+			border-top: 1px solid #fff;
+
+			li {
+
+				text-align: center;
+				width: 25%;
+
+				&.active {
+					border-bottom: 4px solid #fcf5ff;
+				}
+
+				&:hover {
+					border-bottom: 4px solid #fcf5ff;
+				}
+
+				a {
+					display: block;
+					color: $p-color;
+					padding: 10px;
+
+					&:hover {
+						color: $p-color;
+						text-decoration: none;
+					}
+
+					span {
+						display: block;
+						position: relative;
+
+						&.logo-pig:before {
+							display: inline-block;
+							vertical-align: middle;
+							background: url('../images/logo-pig.png') top left no-repeat;
+							width: 28px;
+							height: 28px;
+							background-size: 100%;
+							content: ' ';
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: $bg-primary-color;
 }

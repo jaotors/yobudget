@@ -5,10 +5,8 @@ var gulp = require('gulp'),
 	elixir = require('laravel-elixir'),
 	css = 'public/css',
 	js = 'public/js',
-	fonts = 'public/fonts';
-
-
-
+	fonts = 'public/fonts',
+	images = 'public/images';
 
 gulp.task('components', function() {
 	/* jquery */
@@ -18,7 +16,11 @@ gulp.task('components', function() {
 	/* font-awesome */
 	gulp.src('node_modules/font-awesome/fonts/*')
 		.pipe(gulp.dest(fonts));
+});
 
+gulp.task('images', function() {
+	gulp.src('resources/assets/images/*')
+		.pipe(gulp.dest(images));
 });
 
 gulp.task('styles', function() {
@@ -34,13 +36,12 @@ gulp.task('scripts', function() {
 });
 
 elixir(function(mix) {
-	
 	mix.task('components');
-	mix.task('styles');
-	mix.task('scripts');
+	mix.task('images');
 	mix.task('styles', 'resources/assets/sass/*.scss');
 	mix.task('scripts', 'resources/assets/js/*.js');
 	mix.browserSync({
-		files: ['resources']
+		files: ['resources'],
+		notify: false
 	});
 });
