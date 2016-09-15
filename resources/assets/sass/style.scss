@@ -18,7 +18,12 @@ html {
 
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background-color: #fcf5ff;
+	width: 768px;
+	margin: 0 auto;
+
+	@media screen and (max-width: $w-small) {
+		width: 100%;
+	}
 }
 
 header {
@@ -35,12 +40,13 @@ header {
 		a.menu-bars {
 			display: table-cell;
 			vertical-align: middle;
-			text-align: left;
+			text-align: center;
 			color: $p-color;
 		}
 
 		.head-main-content {
 			display: table-cell;
+			padding-left: 5px;
 
 			.sub-container {
 				display: table;
@@ -58,14 +64,14 @@ header {
 					}
 
 					.current-money {
-						font-size: 20px;
+						font-size: 15px;
 					}
 				}
 
 				p.date-today {
 					display: table-cell;
 					vertical-align: middle;
-					font-size: 20px;
+					font-size: 15px;
 				}
 			}
 		}
@@ -78,6 +84,7 @@ header {
 			justify-content: space-around;
 			list-style-type: none;
 			border-top: 1px solid #fff;
+			margin-bottom: 0;
 
 			li {
 
@@ -85,17 +92,17 @@ header {
 				width: 25%;
 
 				&.active {
-					border-bottom: 4px solid #fcf5ff;
+					border-bottom: 4px solid #FCF5FF;
 				}
 
 				&:hover {
-					border-bottom: 4px solid #fcf5ff;
+					border-bottom: 4px solid #FCF5FF;
 				}
 
 				a {
 					display: block;
 					color: $p-color;
-					padding: 10px;
+					padding: 14px 10px;
 
 					&:hover {
 						color: $p-color;
@@ -110,8 +117,8 @@ header {
 							display: inline-block;
 							vertical-align: middle;
 							background: url('../images/logo-pig.png') top left no-repeat;
-							width: 28px;
-							height: 28px;
+							width: 18px;
+							height: 18px;
 							background-size: 100%;
 							content: ' ';
 						}
@@ -122,6 +129,130 @@ header {
 	}
 }
 
+main {
+	padding: 5px 0;
+	background-color: #fcf5ff;
+
+	.main-container {
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		.transac-container {
+			padding: 0;
+			list-style-type: none;
+
+			li {
+				.date-summary-exp {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 10px;
+
+					p {
+						margin-bottom: 0;
+
+						&.date-title {
+							font-size: 21px;
+							color: $color-def;
+						}
+
+						&.summary-exp {
+							font-size: 15px;
+							color: $color-exp;
+							font-weight: bold;
+						}
+					}
+				}
+
+				.transac-list {
+					padding: 0;
+					margin: 0 10px;
+					list-style-type: none;
+
+					li {
+						display: flex;
+						justify-content: space-between;
+						align-items: flex-start;
+						margin-bottom: 10px;
+
+						.img-icon {
+						}
+
+						&:last-child {
+							.transac-details-container {
+								margin-bottom: 0;
+								border-bottom: 0;
+							}
+						}
+
+						.transac-details-container {
+							display: flex;
+							flex-grow: 1;
+							margin-left: 10px;
+							justify-content: space-between;
+							border-bottom: 1px solid #d3d3d3;
+							font-size: 12px;
+							padding-bottom: 10px;
+
+							p {
+								margin-bottom: 0;
+							}
+
+							.detail-desc {
+
+								.title {
+									color: #6d6d6d;
+									font-size: 13px;
+									font-weight: 600;
+									margin-bottom: 5px;
+									width: 100%;
+									overflow: hidden;
+									text-overflow: ellipsis;
+								}
+
+								.category {
+									color: #adadad;
+								}
+							}
+
+							.money-container {
+								text-align: right;
+
+								.money-exp {
+									margin-bottom: 5px;
+									font-weight: 600;
+									color: $color-exp;
+								}
+
+								.from-money {
+									color: #adadad;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 footer {
 	background-color: $bg-primary-color;
+	padding: 10px;
+
+	.jt-logo {
+		border: 2px solid #fff;
+		padding: 8px;
+		max-width: 40px;
+		margin: 0 auto;
+		border-radius: 50%;
+		
+		img {
+			width: 100%;
+			animation: rotateObj 2s infinite;
+		}
+	}
 }

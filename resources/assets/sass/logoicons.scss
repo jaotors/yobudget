@@ -1,0 +1,17 @@
+.img-icon {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: $bg-primary-color;
+	color: $p-color;
+	text-align: center;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		font-size: 16px;
+		transform: translate(-50%, -50%);
+	}
+}

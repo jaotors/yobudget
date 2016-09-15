@@ -29,16 +29,16 @@
 
 		<nav>
 			<ul>
-				<li class="active"><a href="#"><span class="fa fa-home fa-2x"></span></a></li>
+				<li class="active"><a href="#"><span class="fa fa-home fa-lg"></span></a></li>
 				<li><a href="#"><span class="logo-pig"></span></a></li>
-				<li><a href="#"><span class="fa fa-pie-chart fa-2x"></span></a></li>
-				<li><a href="#"><span class="fa fa-puzzle-piece fa-2x"></span></a></li>
+				<li><a href="#"><span class="fa fa-pie-chart fa-lg"></span></a></li>
+				<li><a href="#"><span class="fa fa-puzzle-piece fa-lg"></span></a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<div class="main-container container">
+		<div class="main-container">
 			<ul class="transac-container">
 				<li>
 					<div class="date-summary-exp">
@@ -47,7 +47,7 @@
 					</div>
 					<ul class="transac-list">
 						<li>
-							<div class="img-icon logo-food"></div>
+							<div class="img-icon fa fa-cutlery"></div>
 							<div class="transac-details-container">
 								<div class="detail-desc">
 									<p class="title">Breakfast in the morning</p>
@@ -61,7 +61,7 @@
 						</li>
 
 						<li>
-							<div class="img-icon logo-car"></div>
+							<div class="img-icon fa fa-car"></div>
 							<div class="transac-details-container">
 								<div class="detail-desc">
 									<p class="title">Gas</p>
@@ -75,7 +75,7 @@
 						</li>
 
 						<li>
-							<div class="img-icon logo-transport"></div>
+							<div class="img-icon fa fa-subway"></div>
 							<div class="transac-details-container">
 								<div class="detail-desc">
 									<p class="title">Going to office</p>
@@ -89,7 +89,7 @@
 						</li>
 
 						<li>
-							<div class="img-icon logo-entertainment"></div>
+							<div class="img-icon fa fa-beer"></div>
 							<div class="transac-details-container">
 								<div class="detail-desc">
 									<p class="title">with Friends</p>
@@ -103,11 +103,11 @@
 						</li>
 
 						<li>
-							<div class="img-icon logo-credit"></div>
+							<div class="img-icon fa fa-credit-card-alt"></div>
 							<div class="transac-details-container">
 								<div class="detail-desc">
 									<p class="title">utang kay Heisenberg</p>
-									<p class="category">Food</p>
+									<p class="category">Credit</p>
 								</div>
 								<div class="money-container">
 									<p class="money-exp">-1500.00 PHP</p>
@@ -123,14 +123,7 @@
 
 
 	<footer>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+		<div class="jt-logo"><img src="{{URL::asset('images/jaotors-logo.png')}}" alt="JAOTORS"></div>
 	</footer>
 
 
