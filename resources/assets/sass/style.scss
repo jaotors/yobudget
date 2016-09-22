@@ -1,31 +1,3 @@
-/*
-********************************************************************
-****** 160822 ******************************************************
-****** Yo! Budget Project; *****************************************
-****** Coded by Joshua B. Turingan; ********************************
-****** using Bootstrap framework; **********************************
-********************************************************************
-*/
-
-html {
-	box-sizing: border-box;
-}
-
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
-
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	width: 768px;
-	margin: 0 auto;
-
-	@media screen and (max-width: $w-small) {
-		width: 100%;
-	}
-}
-
 header {
 	background-color: $bg-primary-color;
 
@@ -132,103 +104,115 @@ header {
 main {
 	padding: 5px 0;
 	background-color: #fcf5ff;
+	margin-bottom: 60px;
 
-	.main-container {
-		width: 100%;
-		margin-right: auto;
-		margin-left: auto;
-		padding-left: 10px;
-		padding-right: 10px;
+	.content-container {
+		overflow: hidden;
 
-		.transac-container {
-			padding: 0;
-			list-style-type: none;
 
-			li {
-				.date-summary-exp {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					margin-bottom: 10px;
 
-					p {
-						margin-bottom: 0;
+		.main-container {
+			width: 100%;
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 10px;
+			padding-right: 10px;
 
-						&.date-title {
-							font-size: 21px;
-							color: $color-def;
-						}
+			.transac-container {
+				padding: 0;
+				margin-bottom: 0;
+				list-style-type: none;
 
-						&.summary-exp {
-							font-size: 15px;
-							color: $color-exp;
-							font-weight: bold;
-						}
-					}
-				}
-
-				.transac-list {
-					padding: 0;
-					margin: 0 10px;
-					list-style-type: none;
-
-					li {
+				li {
+					.date-summary-exp {
 						display: flex;
 						justify-content: space-between;
-						align-items: flex-start;
+						align-items: center;
 						margin-bottom: 10px;
 
-						.img-icon {
-						}
+						p {
+							margin-bottom: 0;
 
-						&:last-child {
-							.transac-details-container {
-								margin-bottom: 0;
-								border-bottom: 0;
+							&.date-title {
+								font-size: 21px;
+								color: $color-def;
+							}
+
+							&.summary-exp {
+								font-size: 15px;
+								color: $color-exp;
+								font-weight: bold;
 							}
 						}
+					}
 
-						.transac-details-container {
+					.transac-list {
+						padding: 0;
+						margin: 0 10px;
+						list-style-type: none;
+
+						li {
 							display: flex;
-							flex-grow: 1;
-							margin-left: 10px;
 							justify-content: space-between;
-							border-bottom: 1px solid #d3d3d3;
-							font-size: 12px;
-							padding-bottom: 10px;
+							align-items: flex-start;
+							margin-bottom: 10px;
 
-							p {
+							.img-icon {
+							}
+
+							&:last-child {
 								margin-bottom: 0;
-							}
-
-							.detail-desc {
-
-								.title {
-									color: #6d6d6d;
-									font-size: 13px;
-									font-weight: 600;
-									margin-bottom: 5px;
-									width: 100%;
-									overflow: hidden;
-									text-overflow: ellipsis;
-								}
-
-								.category {
-									color: #adadad;
+								.transac-details-container {
+									margin-bottom: 0;
+									border-bottom: 0;
 								}
 							}
 
-							.money-container {
-								text-align: right;
+							.transac-details-container {
+								@extend .clearfix;
+								flex-grow: 1;
+								margin-left: 10px;
+								border-bottom: 1px solid #d3d3d3;
+								font-size: 12px;
+								padding-bottom: 10px;
 
-								.money-exp {
-									margin-bottom: 5px;
-									font-weight: 600;
-									color: $color-exp;
+								p {
+									margin-bottom: 0;
 								}
 
-								.from-money {
-									color: #adadad;
+								.detail-desc {
+									float: left;
+									width: 55%;
+
+									.title {
+										overflow: hidden;
+										margin-bottom: 5px;
+										color: #6d6d6d;
+										font-size: 13px;
+										font-weight: 600;
+										white-space: nowrap;
+										text-overflow: ellipsis;
+									}
+
+									.category {
+										color: #adadad;
+									}
+								}
+
+								.money-container {
+									width: 45%;
+									float: right;
+									text-align: right;
+
+									.money-exp {
+										margin-bottom: 5px;
+										font-weight: 600;
+										color: $color-exp;
+									}
+
+									.from-money {
+										color: #adadad;
+									}
 								}
 							}
 						}
@@ -236,10 +220,22 @@ main {
 				}
 			}
 		}
+
+		.dashboard-container {
+			@extend .main-container;
+		}
+
+		.bank-container {
+			@extend .main-container;
+		}
 	}
 }
 
 footer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	background-color: $bg-primary-color;
 	padding: 10px;
 

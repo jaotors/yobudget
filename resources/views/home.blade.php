@@ -38,86 +38,92 @@
 	</header>
 
 	<main>
-		<div class="main-container">
-			<ul class="transac-container">
-				<li>
-					<div class="date-summary-exp">
-						<p class="date-title">Today</p>
-						<p class="summary-exp">-2,756.00 PHP</p>
-					</div>
-					<ul class="transac-list">
-						<li>
-							<div class="img-icon fa fa-cutlery"></div>
-							<div class="transac-details-container">
-								<div class="detail-desc">
-									<p class="title">Breakfast in the morning</p>
-									<p class="category">Food</p>
+		<div class="content-container">
+			<div class="dashboard-container">
+				<ul class="transac-container">
+					<li>
+						<div class="date-summary-exp">
+							<p class="date-title">Today</p>
+							<p class="summary-exp">-2,756.00 PHP</p>
+						</div>
+						<ul class="transac-list">
+							<li>
+								<div class="img-icon fa fa-cutlery"></div>
+								<div class="transac-details-container">
+									<div class="detail-desc">
+										<p class="title">Breakfast in the morning</p>
+										<p class="category">Food</p>
+									</div>
+									<div class="money-container">
+										<p class="money-exp">-25.00 PHP</p>
+										<p class="from-money">Cash on Hand</p>
+									</div>
 								</div>
-								<div class="money-container">
-									<p class="money-exp">-25.00 PHP</p>
-									<p class="from-money">Cash on Hand</p>
-								</div>
-							</div>
-						</li>
+							</li>
 
-						<li>
-							<div class="img-icon fa fa-car"></div>
-							<div class="transac-details-container">
-								<div class="detail-desc">
-									<p class="title">Gas</p>
-									<p class="category">Car</p>
+							<li>
+								<div class="img-icon fa fa-car"></div>
+								<div class="transac-details-container">
+									<div class="detail-desc">
+										<p class="title">Gas</p>
+										<p class="category">Car</p>
+									</div>
+									<div class="money-container">
+										<p class="money-exp">-700.00 PHP</p>
+										<p class="from-money">Credit/Debit Card</p>
+									</div>
 								</div>
-								<div class="money-container">
-									<p class="money-exp">-700.00 PHP</p>
-									<p class="from-money">Credit/Debit Card</p>
-								</div>
-							</div>
-						</li>
+							</li>
 
-						<li>
-							<div class="img-icon fa fa-subway"></div>
-							<div class="transac-details-container">
-								<div class="detail-desc">
-									<p class="title">Going to office</p>
-									<p class="category">Transport</p>
+							<li>
+								<div class="img-icon fa fa-subway"></div>
+								<div class="transac-details-container">
+									<div class="detail-desc">
+										<p class="title">Going to office</p>
+										<p class="category">Transport</p>
+									</div>
+									<div class="money-container">
+										<p class="money-exp">-31.00 PHP</p>
+										<p class="from-money">Cash on Hand</p>
+									</div>
 								</div>
-								<div class="money-container">
-									<p class="money-exp">-31.00 PHP</p>
-									<p class="from-money">Cash on Hand</p>
-								</div>
-							</div>
-						</li>
+							</li>
 
-						<li>
-							<div class="img-icon fa fa-beer"></div>
-							<div class="transac-details-container">
-								<div class="detail-desc">
-									<p class="title">with Friends</p>
-									<p class="category">Credit</p>
+							<li>
+								<div class="img-icon fa fa-beer"></div>
+								<div class="transac-details-container">
+									<div class="detail-desc">
+										<p class="title">with Friends</p>
+										<p class="category">Credit</p>
+									</div>
+									<div class="money-container">
+										<p class="money-exp">-500.00 PHP</p>
+										<p class="from-money">Cash on Hand</p>
+									</div>
 								</div>
-								<div class="money-container">
-									<p class="money-exp">-500.00 PHP</p>
-									<p class="from-money">Cash on Hand</p>
-								</div>
-							</div>
-						</li>
+							</li>
 
-						<li>
-							<div class="img-icon fa fa-credit-card-alt"></div>
-							<div class="transac-details-container">
-								<div class="detail-desc">
-									<p class="title">utang kay Heisenberg</p>
-									<p class="category">Credit</p>
+							<li>
+								<div class="img-icon fa fa-credit-card-alt"></div>
+								<div class="transac-details-container">
+									<div class="detail-desc">
+										<p class="title">utang kay Heisenberg</p>
+										<p class="category">Credit</p>
+									</div>
+									<div class="money-container">
+										<p class="money-exp">-1500.00 PHP</p>
+										<p class="from-money">Cash on Hand</p>
+									</div>
 								</div>
-								<div class="money-container">
-									<p class="money-exp">-1500.00 PHP</p>
-									<p class="from-money">Cash on Hand</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</li>
-			</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="bank-container">
+				
+			</div>
 		</div>
 	</main>
 
