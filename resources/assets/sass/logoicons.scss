@@ -1,4 +1,4 @@
-.img-icon {
+%imgicon {
 	position: relative;
 	width: 40px;
 	height: 40px;
@@ -13,5 +13,29 @@
 		left: 50%;
 		font-size: 16px;
 		transform: translate(-50%, -50%);
+	}
+}
+
+.img-icon {
+	@extend %imgicon;
+
+	&--inc {
+		@extend %imgicon;
+		background-color: $color-inc;
+	}
+
+	&--bank {
+		@extend %imgicon;
+		background-color: $color-bank;
+	}
+
+	&--loan {
+		@extend %imgicon;
+		background-color: $color-loan;
+	}
+
+	&--exp {
+		@extend %imgicon;
+		background-color: $color-exp;
 	}
 }

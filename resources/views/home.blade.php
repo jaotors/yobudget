@@ -18,7 +18,7 @@
 						<div class="sub-container">
 							<div class="title-money-container">
 								<h1 class="page-title">Dashboard</h1>
-								<p class="current-money"><span class="logo-wallet"></span>: 1,000 PHP</p>
+								<p class="current-money"><span class="fa fa-money fa-lg"></span> : 1,000.00</p>
 							</div>
 							<p class="date-today">03/14/2015</p>
 						</div>
@@ -48,71 +48,81 @@
 						</div>
 						<ul class="transac-list">
 							<li>
-								<div class="img-icon fa fa-cutlery"></div>
-								<div class="transac-details-container">
-									<div class="detail-desc">
-										<p class="title">Breakfast in the morning</p>
-										<p class="category">Food</p>
-									</div>
-									<div class="money-container">
-										<p class="money-exp">-25.00 PHP</p>
-										<p class="from-money">Cash on Hand</p>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="img-icon fa fa-car"></div>
-								<div class="transac-details-container">
-									<div class="detail-desc">
-										<p class="title">Gas</p>
-										<p class="category">Car</p>
-									</div>
-									<div class="money-container">
-										<p class="money-exp">-700.00 PHP</p>
-										<p class="from-money">Credit/Debit Card</p>
+								<div class="transac-list-cont">
+									<div class="img-icon fa fa-cutlery"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title">Breakfast in the morning</p>
+											<p class="category">Food</p>
+										</div>
+										<div class="money-container">
+											<p class="money--exp">-25.00 PHP</p>
+											<p class="from-money">Cash on Hand</p>
+										</div>
 									</div>
 								</div>
 							</li>
 
 							<li>
-								<div class="img-icon fa fa-subway"></div>
-								<div class="transac-details-container">
-									<div class="detail-desc">
-										<p class="title">Going to office</p>
-										<p class="category">Transport</p>
-									</div>
-									<div class="money-container">
-										<p class="money-exp">-31.00 PHP</p>
-										<p class="from-money">Cash on Hand</p>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<div class="img-icon fa fa-beer"></div>
-								<div class="transac-details-container">
-									<div class="detail-desc">
-										<p class="title">with Friends</p>
-										<p class="category">Credit</p>
-									</div>
-									<div class="money-container">
-										<p class="money-exp">-500.00 PHP</p>
-										<p class="from-money">Cash on Hand</p>
+								<div class="transac-list-cont">
+									<div class="img-icon fa fa-car"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title">Gas</p>
+											<p class="category">Car</p>
+										</div>
+										<div class="money-container">
+											<p class="money--exp">-700.00 PHP</p>
+											<p class="from-money">Credit/Debit Card</p>
+										</div>
 									</div>
 								</div>
 							</li>
 
 							<li>
-								<div class="img-icon fa fa-credit-card-alt"></div>
-								<div class="transac-details-container">
-									<div class="detail-desc">
-										<p class="title">utang kay Heisenberg</p>
-										<p class="category">Credit</p>
+								<div class="transac-list-cont">
+									<div class="img-icon fa fa-subway"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title">Going to office</p>
+											<p class="category">Transport</p>
+										</div>
+										<div class="money-container">
+											<p class="money--exp">-31.00 PHP</p>
+											<p class="from-money">Cash on Hand</p>
+										</div>
 									</div>
-									<div class="money-container">
-										<p class="money-exp">-1500.00 PHP</p>
-										<p class="from-money">Cash on Hand</p>
+								</div>
+							</li>
+
+							<li>
+								<div class="transac-list-cont">
+									<div class="img-icon fa fa-beer"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title">with Friends</p>
+											<p class="category">Credit</p>
+										</div>
+										<div class="money-container">
+											<p class="money--exp">-500.00 PHP</p>
+											<p class="from-money">Cash on Hand</p>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="transac-list-cont">
+									<div class="img-icon fa fa-credit-card-alt"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title">utang kay Heisenberg</p>
+											<p class="category">Credit</p>
+										</div>
+										<div class="money-container">
+											<p class="money--exp">-1500.00 PHP</p>
+											<p class="from-money">Cash on Hand</p>
+										</div>
 									</div>
 								</div>
 							</li>
@@ -122,7 +132,75 @@
 			</div>
 
 			<div class="bank-container">
-				
+				<ul class="transac-container">
+					<li>
+						<div class="date-summary-exp">
+							<p class="date-title">This Month</p>
+						</div>
+						<ul class="transac-list">
+							<li>
+								<div class="transac-list-cont">
+									<div class="img-icon--inc fa fa-money"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title--inc">Cash on Hand</p>
+										</div>
+										<div class="money-container">
+											<p class="money--inc">1,000.00</p>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="transac-list-cont">
+									<div class="img-icon--bank fa fa-bank"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title--bank">Bank</p>
+										</div>
+										<div class="money-container">
+											<p class="money--bank">1,000.00</p>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<div class="transac-list-cont">
+									<div class="img-icon--loan fa fa-credit-card-alt"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title--loan">loans</p>
+										</div>
+										<div class="money-container">
+											<p class="money--loan">1,000.00</p>
+										</div>
+									</div>
+								</div>
+								<ul class="transac-list-details">
+									<li>
+										
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<div class="transac-list-cont">
+									<div class="img-icon--exp fa fa-shopping-cart"></div>
+									<div class="transac-details-container">
+										<div class="detail-desc">
+											<p class="title--exp">expenses</p>
+										</div>
+										<div class="money-container">
+											<p class="money--exp">1,000.00</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</main>

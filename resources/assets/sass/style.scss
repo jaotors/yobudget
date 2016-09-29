@@ -109,9 +109,7 @@ main {
 	.content-container {
 		overflow: hidden;
 
-
-
-		.main-container {
+		%main-container {
 			width: 100%;
 			margin-right: auto;
 			margin-left: auto;
@@ -128,7 +126,10 @@ main {
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
+						border-bottom: 1px solid #d3d3d3;
+						padding: 5px 0;
 						margin-bottom: 10px;
+
 
 						p {
 							margin-bottom: 0;
@@ -152,19 +153,20 @@ main {
 						list-style-type: none;
 
 						li {
-							display: flex;
-							justify-content: space-between;
-							align-items: flex-start;
+
 							margin-bottom: 10px;
 
-							.img-icon {
+							.transac-list-cont {
+								display: flex;
+								justify-content: space-between;
+								align-items: flex-start;
 							}
 
 							&:last-child {
 								margin-bottom: 0;
 								.transac-details-container {
 									margin-bottom: 0;
-									border-bottom: 0;
+									border-bottom: none;
 								}
 							}
 
@@ -204,10 +206,30 @@ main {
 									float: right;
 									text-align: right;
 
-									.money-exp {
-										margin-bottom: 5px;
+									%money {
 										font-weight: 600;
-										color: $color-exp;
+									}
+
+									.money {
+										&--exp {
+											@extend %money;
+											color: $color-exp;
+										}
+
+										&--inc {
+											@extend %money;
+											color: $color-inc;
+										}
+
+										&--bank {
+											@extend %money;
+											color: $color-bank;
+										}
+
+										&--loan {
+											@extend %money;
+											color: $color-loan;
+										}
 									}
 
 									.from-money {
@@ -222,11 +244,107 @@ main {
 		}
 
 		.dashboard-container {
-			@extend .main-container;
+			@extend %main-container;
+			display: none;
+
+			.transac-list {
+
+				.transac-details-container {
+
+					.money-container {
+
+						p:first-child {
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
 		}
 
 		.bank-container {
-			@extend .main-container;
+			@extend %main-container;
+			
+
+			.transac-container {
+
+				li {
+
+					.transac-list {
+
+						li {
+
+							padding-bottom: 10px;
+							border-bottom: 1px solid #d3d3d3;
+
+							.transac-list-cont {
+								align-items: center;
+							}
+
+							&:last-child {
+								border-bottom: none;
+								margin-bottom: 0;
+							}
+
+							.transac-details-container {
+								padding-bottom: 0;
+								border-bottom: none;
+
+								.detail-desc {
+
+									p {	
+										text-transform: uppercase;
+									}
+
+									%title {
+										font-size: 15px;
+										font-weight: 600;
+										margin-bottom: 0;
+									}
+
+									.title {
+										&--inc {
+											@extend %title;
+											color: $color-inc;
+										}
+
+										&--bank {
+											@extend %title;
+											color: $color-bank;
+										}
+
+										&--loan {
+											@extend %title;
+											color: $color-loan;
+										}
+
+										&--exp{
+											@extend %title;
+											color: $color-exp;
+										}
+									}
+								}
+
+								.money-container {
+									
+									p:first-child {
+										font-size: 15px;
+										margin-bottom: 0;
+									}
+								}
+							}
+
+							.transac-list-details {
+								list-style-type: none;
+								padding-left: 50px;
+
+								
+							}
+						}
+
+					}
+				}
+			}
+
 		}
 	}
 }
@@ -248,7 +366,7 @@ footer {
 		
 		img {
 			width: 100%;
-			animation: rotateObj 2s infinite;
+			animation: rotateObj 3s infinite;
 		}
 	}
 }
