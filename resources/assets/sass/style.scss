@@ -36,7 +36,17 @@ header {
 					}
 
 					.current-money {
-						font-size: 15px;
+						position: relative;
+						padding-left: 25px;
+
+						.img-icon--wallet-o {
+
+							&:before {
+								display: block;
+								position: absolute;
+								left: 0;
+							}
+						}
 					}
 				}
 
@@ -88,7 +98,7 @@ header {
 						&.logo-pig:before {
 							display: inline-block;
 							vertical-align: middle;
-							background: url('../images/logo-pig.png') top left no-repeat;
+							background: url('../images/img-icon-bank.png') top left no-repeat;
 							width: 18px;
 							height: 18px;
 							background-size: 100%;
@@ -121,120 +131,119 @@ main {
 				margin-bottom: 0;
 				list-style-type: none;
 
-				li {
-					.date-summary-exp {
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						border-bottom: 1px solid #d3d3d3;
-						padding: 5px 0;
-						margin-bottom: 10px;
+				
+				.date-summary-exp {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					border-bottom: 1px solid #d3d3d3;
+					padding: 5px 0;
+					margin-bottom: 10px;
 
 
-						p {
-							margin-bottom: 0;
+					p {
+						margin-bottom: 0;
 
-							&.date-title {
-								font-size: 21px;
-								color: $color-def;
-							}
+						&.date-title {
+							font-size: 21px;
+							color: $color-def;
+						}
 
-							&.summary-exp {
-								font-size: 15px;
-								color: $color-exp;
-								font-weight: bold;
-							}
+						&.summary-exp {
+							font-size: 15px;
+							color: $color-exp;
+							font-weight: bold;
 						}
 					}
+				}
 
-					.transac-list {
-						padding: 0;
-						margin: 0 10px;
-						list-style-type: none;
+				.transac-list {
+					padding: 0;
+					margin: 0 10px;
+					list-style-type: none;
 
-						li {
+					li {
 
-							margin-bottom: 10px;
+						margin-bottom: 10px;
 
-							.transac-list-cont {
-								display: flex;
-								justify-content: space-between;
-								align-items: flex-start;
-							}
+						.transac-list-cont {
+							display: flex;
+							justify-content: space-between;
+							align-items: flex-start;
+						}
 
-							&:last-child {
-								margin-bottom: 0;
-								.transac-details-container {
-									margin-bottom: 0;
-									border-bottom: none;
-								}
-							}
-
+						&:last-child {
+							margin-bottom: 0;
 							.transac-details-container {
-								@extend .clearfix;
-								flex-grow: 1;
-								margin-left: 10px;
-								border-bottom: 1px solid #d3d3d3;
-								font-size: 12px;
-								padding-bottom: 10px;
+								margin-bottom: 0;
+								border-bottom: none;
+							}
+						}
 
-								p {
-									margin-bottom: 0;
+						.transac-details-container {
+							@extend .clearfix;
+							flex-grow: 1;
+							margin-left: 10px;
+							border-bottom: 1px solid #d3d3d3;
+							font-size: 12px;
+							padding-bottom: 10px;
+
+							p {
+								margin-bottom: 0;
+							}
+
+							.detail-desc {
+								float: left;
+								width: 55%;
+
+								.title {
+									overflow: hidden;
+									margin-bottom: 5px;
+									color: #6d6d6d;
+									font-size: 13px;
+									font-weight: 600;
+									white-space: nowrap;
+									text-overflow: ellipsis;
 								}
 
-								.detail-desc {
-									float: left;
-									width: 55%;
+								.category {
+									color: #adadad;
+								}
+							}
 
-									.title {
-										overflow: hidden;
-										margin-bottom: 5px;
-										color: #6d6d6d;
-										font-size: 13px;
-										font-weight: 600;
-										white-space: nowrap;
-										text-overflow: ellipsis;
+							.money-container {
+								width: 45%;
+								float: right;
+								text-align: right;
+
+								%money {
+									font-weight: 600;
+								}
+
+								.money {
+									&--exp {
+										@extend %money;
+										color: $color-exp;
 									}
 
-									.category {
-										color: #adadad;
+									&--inc {
+										@extend %money;
+										color: $color-inc;
+									}
+
+									&--bank {
+										@extend %money;
+										color: $color-bank;
+									}
+
+									&--loan {
+										@extend %money;
+										color: $color-loan;
 									}
 								}
 
-								.money-container {
-									width: 45%;
-									float: right;
-									text-align: right;
-
-									%money {
-										font-weight: 600;
-									}
-
-									.money {
-										&--exp {
-											@extend %money;
-											color: $color-exp;
-										}
-
-										&--inc {
-											@extend %money;
-											color: $color-inc;
-										}
-
-										&--bank {
-											@extend %money;
-											color: $color-bank;
-										}
-
-										&--loan {
-											@extend %money;
-											color: $color-loan;
-										}
-									}
-
-									.from-money {
-										color: #adadad;
-									}
+								.from-money {
+									color: #adadad;
 								}
 							}
 						}
@@ -263,88 +272,169 @@ main {
 
 		.bank-container {
 			@extend %main-container;
-			
+			display: none;
 
 			.transac-container {
 
-				li {
+				.transac-list {
 
-					.transac-list {
+					li {
 
-						li {
+						padding-bottom: 10px;
+						border-bottom: 1px solid #d3d3d3;
 
-							padding-bottom: 10px;
-							border-bottom: 1px solid #d3d3d3;
+						.transac-list-cont {
+							align-items: center;
+						}
 
-							.transac-list-cont {
-								align-items: center;
-							}
+						&:last-child {
+							border-bottom: none;
+							margin-bottom: 0;
+						}
 
-							&:last-child {
-								border-bottom: none;
-								margin-bottom: 0;
-							}
+						.transac-details-container {
+							padding-bottom: 0;
+							border-bottom: none;
 
-							.transac-details-container {
-								padding-bottom: 0;
-								border-bottom: none;
+							.detail-desc {
 
-								.detail-desc {
+								p {
+									text-transform: uppercase;
+								}
 
-									p {	
-										text-transform: uppercase;
+								%title {
+									font-size: 15px;
+									font-weight: 600;
+									margin-bottom: 0;
+								}
+
+								.title {
+									&--inc {
+										@extend %title;
+										color: $color-inc;
 									}
 
-									%title {
-										font-size: 15px;
-										font-weight: 600;
+									&--bank {
+										@extend %title;
+										color: $color-bank;
+									}
+
+									&--loan {
+										@extend %title;
+										color: $color-loan;
+									}
+
+									&--exp{
+										@extend %title;
+										color: $color-exp;
+									}
+								}
+							}
+
+							.money-container {
+								
+								p:first-child {
+									font-size: 15px;
+									margin-bottom: 0;
+								}
+							}
+						}
+
+						.transac-list-details {
+							list-style-type: none;
+							padding-left: 50px;
+
+							li {
+								@extend .clearfix;
+								padding-bottom: 0;
+								margin-bottom: 10px;
+								border-bottom: none;
+
+								&:last-child {
+									margin-bottom: 0;
+								}
+
+								.detail-desc {
+									float: left;
+									width: 54%;
+									overflow: hidden;
+									color: $color-def;
+
+									p {
 										margin-bottom: 0;
 									}
 
 									.title {
+										width: 100%;
+										white-space: nowrap;
+										overflow: hidden;
+										text-overflow: ellipsis;
+									}
+
+									.category {
+										font-size: 12px;
+
 										&--inc {
-											@extend %title;
 											color: $color-inc;
 										}
 
 										&--bank {
-											@extend %title;
 											color: $color-bank;
 										}
 
 										&--loan {
-											@extend %title;
 											color: $color-loan;
 										}
 
-										&--exp{
-											@extend %title;
+										&--exp {
 											color: $color-exp;
 										}
 									}
 								}
 
 								.money-container {
-									
-									p:first-child {
-										font-size: 15px;
-										margin-bottom: 0;
+									float: right;
+
+									.money {
+										color: $color-def;
 									}
 								}
 							}
-
-							.transac-list-details {
-								list-style-type: none;
-								padding-left: 50px;
-
-								
-							}
 						}
-
 					}
+
 				}
 			}
+		}
 
+		.category-container {
+			@extend %main-container;
+			.transac-container {
+				li {
+					display: flex;
+					align-items: center;
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					border-bottom: 1px solid #d3d3d3;
+
+					&:last-child {
+						margin-bottom: 0;
+						border-bottom: none;
+					}
+
+					.transac-details-container {
+						flex-grow: 1;
+						margin-left: 10px;
+
+						.title {
+							font-weight: 600;
+							color: $color-def;
+							margin-bottom: 0;
+						}
+					}
+
+				}
+			}
 		}
 	}
 }

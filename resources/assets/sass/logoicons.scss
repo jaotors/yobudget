@@ -22,20 +22,66 @@
 	&--inc {
 		@extend %imgicon;
 		background-color: $color-inc;
+
+		&:before {
+			background: url('../images/img-icon-wallet.png') top left no-repeat;
+			width: 20px;
+			height: 20px;
+			background-size: 100% 100%;
+			content: ' ';
+		}
+
 	}
 
 	&--bank {
 		@extend %imgicon;
 		background-color: $color-bank;
+
+		&:before {
+			background: url('../images/img-icon-bank.png') top left no-repeat;
+			width: 20px;
+			height: 20px;
+			background-size: 100% 100%;
+			content: ' ';
+		}
 	}
 
 	&--loan {
 		@extend %imgicon;
 		background-color: $color-loan;
+
+		&:before {
+			background: url('../images/img-icon-loans.png') top left no-repeat;
+			width: 20px;
+			height: 19px;
+			background-size: 100% 100%;
+			content: ' ';
+		}
 	}
 
 	&--exp {
 		@extend %imgicon;
 		background-color: $color-exp;
+
+		&:before {
+			background: url('../images/img-icon-expenses.png') top left no-repeat;
+			width: 20px;
+			height: 20px;
+			background-size: 100% 100%;
+			content: ' ';
+		}
 	}
+
+	&--wallet-o {
+
+		&:before {
+			background: url('../images/img-icon-wallet-o.png') top left no-repeat;
+			width: 20px;
+			height: 20px;
+			background-size: 100% 100%;
+			content: ' ';
+		}
+	}
+
+	
 }

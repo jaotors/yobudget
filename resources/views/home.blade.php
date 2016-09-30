@@ -18,7 +18,7 @@
 						<div class="sub-container">
 							<div class="title-money-container">
 								<h1 class="page-title">Dashboard</h1>
-								<p class="current-money"><span class="fa fa-money fa-lg"></span> : 1,000.00</p>
+								<p class="current-money"><span class="img-icon--wallet-o"></span> : 1,000.00</p>
 							</div>
 							<p class="date-today">03/14/2015</p>
 						</div>
@@ -38,7 +38,7 @@
 	</header>
 
 	<main>
-		<div class="content-container">
+		<div class="content-container ">
 			<div class="dashboard-container">
 				<ul class="transac-container">
 					<li>
@@ -131,7 +131,7 @@
 				</ul>
 			</div>
 
-			<div class="bank-container">
+			<div class="bank-container ">
 				<ul class="transac-container">
 					<li>
 						<div class="date-summary-exp">
@@ -140,7 +140,7 @@
 						<ul class="transac-list">
 							<li>
 								<div class="transac-list-cont">
-									<div class="img-icon--inc fa fa-money"></div>
+									<div class="img-icon--inc"></div>
 									<div class="transac-details-container">
 										<div class="detail-desc">
 											<p class="title--inc">Cash on Hand</p>
@@ -154,16 +154,38 @@
 
 							<li>
 								<div class="transac-list-cont">
-									<div class="img-icon--bank fa fa-bank"></div>
+									<div class="img-icon--bank"></div>
 									<div class="transac-details-container">
 										<div class="detail-desc">
 											<p class="title--bank">Bank</p>
 										</div>
 										<div class="money-container">
-											<p class="money--bank">1,000.00</p>
+											<p class="money--bank">9,000.00</p>
 										</div>
 									</div>
 								</div>
+
+								<ul class="transac-list-details">
+									<li>
+										<div class="detail-desc">
+											<p class="title">BPI</p>
+											<p class="category category--bank">Bank</p>
+										</div>
+										<div class="money-container">
+											<p class="money">2,000.00</p>
+										</div>
+									</li>
+
+									<li>
+										<div class="detail-desc">
+											<p class="title">EastWest Bank</p>
+											<p class="category category--bank">Bank</p>
+										</div>
+										<div class="money-container">
+											<p class="money">7,000.00</p>
+										</div>
+									</li>
+								</ul>
 							</li>
 
 							<li>
@@ -174,13 +196,39 @@
 											<p class="title--loan">loans</p>
 										</div>
 										<div class="money-container">
-											<p class="money--loan">1,000.00</p>
+											<p class="money--loan">1,600.00</p>
 										</div>
 									</div>
 								</div>
 								<ul class="transac-list-details">
 									<li>
-										
+										<div class="detail-desc">
+											<p class="title">Carlo</p>
+											<p class="category category--loan">Credit</p>
+										</div>
+										<div class="money-container">
+											<p class="money">100.00</p>
+										</div>
+									</li>
+
+									<li>
+										<div class="detail-desc">
+											<p class="title">Rigor</p>
+											<p class="category category--loan">Credit</p>
+										</div>
+										<div class="money-container">
+											<p class="money">500.00</p>
+										</div>
+									</li>
+
+									<li>
+										<div class="detail-desc">
+											<p class="title">Kuya Leo</p>
+											<p class="category category--loan">Credit</p>
+										</div>
+										<div class="money-container">
+											<p class="money">1,000.00</p>
+										</div>
 									</li>
 								</ul>
 							</li>
@@ -193,13 +241,67 @@
 											<p class="title--exp">expenses</p>
 										</div>
 										<div class="money-container">
-											<p class="money--exp">1,000.00</p>
+											<p class="money--exp">8,000.00</p>
 										</div>
 									</div>
 								</div>
 							</li>
 						</ul>
 					</li>
+				</ul>
+			</div>
+
+			<div class="category-container">
+				<ul class="transac-container">
+					<li>
+						<div class="img-icon fa fa-cutlery"></div>
+						<div class="transac-details-container">
+							<p class="title">Food</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="img-icon fa fa-car"></div>
+						<div class="transac-details-container">
+							<p class="title">Car</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="img-icon fa fa-subway"></div>
+						<div class="transac-details-container">
+							<p class="title">Transport</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="img-icon fa fa-beer"></div>
+						<div class="transac-details-container">
+							<p class="title">Entertainment</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="img-icon fa fa-credit-card"></div>
+						<div class="transac-details-container">
+							<p class="title">Credit</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="img-icon fa fa-suitcase"></div>
+						<div class="transac-details-container">
+							<p class="title">Salary</p>
+						</div>
+					</li>
+
+					<li>
+						<div class="img-icon fa fa-wrench"></div>
+						<div class="transac-details-container">
+							<p class="title">Tool</p>
+						</div>
+					</li>
+
 				</ul>
 			</div>
 		</div>
