@@ -27,7 +27,7 @@ gulp.task('styles', function() {
 	gulp.src('resources/assets/sass/app.scss')
 		.pipe(sass()).on('error', function(error) {console.log('ERROR ' + error.message + '\n\n');})
 		.pipe(autoprefixer({browsers: ['last 2 versions']}))
-		.pipe(gulp.dest('public/css'));
+		.pipe(gulp.dest(css));
 });
 
 gulp.task('scripts', function() {

@@ -32,11 +32,11 @@ class CategoriesTableSeeder extends Seeder
 				],
 				[
 					'type' => 'credit',
-					'logo_name' => 'fa-credit-card-alt',
+					'logo_name' => 'fa-credit-card',
 				],
 				[
 					'type' => 'salary',
-					'logo_name' => 'fa-money',
+					'logo_name' => 'fa-suitcase',
 				],
 				[
 					'type' => 'tool',

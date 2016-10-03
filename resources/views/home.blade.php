@@ -29,22 +29,39 @@
 
 		<nav>
 			<ul>
-				<li class="active"><a href="#"><span class="fa fa-home fa-lg"></span></a></li>
-				<li><a href="#"><span class="logo-pig"></span></a></li>
-				<li><a href="#"><span class="fa fa-pie-chart fa-lg"></span></a></li>
-				<li><a href="#"><span class="fa fa-puzzle-piece fa-lg"></span></a></li>
+				<li class="active"><a href="#" data-attr="dashboard"><span class="fa fa-home fa-lg"></span></a></li>
+				<li><a href="#" data-attr="bank"><span class="logo-pig"></span></a></li>
+				<li><a href="#" data-attr="report"><span class="fa fa-pie-chart fa-lg"></span></a></li>
+				<li><a href="#" data-attr="category"><span class="fa fa-puzzle-piece fa-lg"></span></a></li>
 			</ul>
 		</nav>
 	</header>
 
+	<div class="sidebar">
+		<div class="side-content">
+			<ul>
+				<li><a href="#" class="close-menu"><i class="fa fa-times fa-2x"></i></a></li>
+				<li><a href="#">Bank account</a></li>
+				<li><a href="#">Change Pin</a></li>
+				<li><a href="#">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="modal-container">
+		<div class="modal-content" data-modal="bank">
+			
+		</div>
+	</div>
+
 	<main>
-		<div class="content-container ">
-			<div class="dashboard-container">
+		<div class="content-container">
+			<div class="dashboard-container active">
 				<ul class="transac-container">
 					<li>
 						<div class="date-summary-exp">
 							<p class="date-title">Today</p>
-							<p class="summary-exp">-2,756.00 PHP</p>
+							<p class="summary-exp">-2,756.00</p>
 						</div>
 						<ul class="transac-list">
 							<li>
@@ -56,7 +73,7 @@
 											<p class="category">Food</p>
 										</div>
 										<div class="money-container">
-											<p class="money--exp">-25.00 PHP</p>
+											<p class="money--exp">-25.00</p>
 											<p class="from-money">Cash on Hand</p>
 										</div>
 									</div>
@@ -72,7 +89,7 @@
 											<p class="category">Car</p>
 										</div>
 										<div class="money-container">
-											<p class="money--exp">-700.00 PHP</p>
+											<p class="money--exp">-700.00</p>
 											<p class="from-money">Credit/Debit Card</p>
 										</div>
 									</div>
@@ -88,7 +105,7 @@
 											<p class="category">Transport</p>
 										</div>
 										<div class="money-container">
-											<p class="money--exp">-31.00 PHP</p>
+											<p class="money--exp">-31.00</p>
 											<p class="from-money">Cash on Hand</p>
 										</div>
 									</div>
@@ -104,7 +121,7 @@
 											<p class="category">Credit</p>
 										</div>
 										<div class="money-container">
-											<p class="money--exp">-500.00 PHP</p>
+											<p class="money--exp">-500.00</p>
 											<p class="from-money">Cash on Hand</p>
 										</div>
 									</div>
@@ -120,7 +137,7 @@
 											<p class="category">Credit</p>
 										</div>
 										<div class="money-container">
-											<p class="money--exp">-1500.00 PHP</p>
+											<p class="money--exp">-1500.00</p>
 											<p class="from-money">Cash on Hand</p>
 										</div>
 									</div>
@@ -131,7 +148,7 @@
 				</ul>
 			</div>
 
-			<div class="bank-container ">
+			<div class="bank-container">
 				<ul class="transac-container">
 					<li>
 						<div class="date-summary-exp">
@@ -306,6 +323,8 @@
 			</div>
 		</div>
 	</main>
+
+	<a class="add-transac" href="#"><i class="img-icon fa fa-plus"></i></a>
 
 
 	<footer>

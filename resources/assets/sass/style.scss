@@ -1,5 +1,10 @@
 header {
 	background-color: $bg-primary-color;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9;
 
 	.container-fluid {
 		margin-bottom: 10px;
@@ -111,20 +116,89 @@ header {
 	}
 }
 
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -260px;
+	width: 250px;
+	background-color: #e4b0ff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	z-index: 10;
+
+	transition: left 0.5s;
+
+	&.active {
+		left: 0;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0 10px;
+		margin: 20px 0;
+
+		li {
+
+			padding: 10px 4px;
+			text-transform: uppercase;
+			border-bottom: 1px solid #fff;
+
+			&:first-child {
+				border-bottom: none;
+				padding-bottom: 5px;
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+	
+}
+
+.add-transac {
+	position: fixed;
+	bottom: 55px;
+	right: 10px;
+	z-index: 11;
+
+	.img-icon {
+		box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+		&:before {
+			font-size: 20px;
+		}
+	}
+}
+
 main {
 	padding: 5px 0;
 	background-color: #fcf5ff;
 	margin-bottom: 60px;
+	margin: 151px auto 60px;
 
 	.content-container {
 		overflow: hidden;
 
 		%main-container {
+			display: none;
 			width: 100%;
 			margin-right: auto;
 			margin-left: auto;
 			padding-left: 10px;
 			padding-right: 10px;
+			opacity: 0;
+
+			animation: fadeIn 1s;
+
+			&.active {
+				display: block;
+				opacity: 1;
+			}
 
 			.transac-container {
 				padding: 0;
@@ -254,7 +328,6 @@ main {
 
 		.dashboard-container {
 			@extend %main-container;
-			display: none;
 
 			.transac-list {
 
@@ -272,7 +345,6 @@ main {
 
 		.bank-container {
 			@extend %main-container;
-			display: none;
 
 			.transac-container {
 
@@ -409,6 +481,7 @@ main {
 
 		.category-container {
 			@extend %main-container;
+
 			.transac-container {
 				li {
 					display: flex;
@@ -445,7 +518,7 @@ footer {
 	bottom: 0;
 	left: 0;
 	background-color: $bg-primary-color;
-	padding: 10px;
+	padding: 7px;
 
 	.jt-logo {
 		border: 2px solid #fff;

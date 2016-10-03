@@ -2,3 +2,8 @@
 	0% {transform: rotateY(0deg);}
 	100% {transform: rotateY(360deg);}
 }
+
+@keyframes fadeIn {
+	from {display: block; opacity: 0;}
+	to {opacity: 1;}
+}
